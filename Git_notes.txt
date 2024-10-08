@@ -1,0 +1,104 @@
+untracted -> staged -> commit -> unmodified -> modified -> staged -> commit ->unmodified(working teee clean)
+
+
+git config --global user.name <username>
+
+git config --global user.email <emailAddress> 
+
+git init -> intitialize folder for git (make .git directory)
+
+git add <filename> -> untracted file to stage area(for commit)
+alternative: for all file to add
+git add -A
+
+git commit -m "enter your messsage this commit" -> commit one or all files which is at stage area
+
+git status
+
+git checkout <filename> -> for undo last commit , if ur fjle is destroyed...
+alternative : for all files together
+git checkout -f
+
+git log -> to show all commit 
+alternative
+git log -p -<no.>  -> get latest 'n' commits , alos tell what chances happened
+
+git diff -> compare modified area with  staged area
+git diff --staged -> compare staged area with last commit area
+
+git commit -a -m "skipped staging area , direct commit"
+
+git rm --cached <filename> -> remove committed file/staged area to untracted area
+
+git rm <filename> -> file deleted form everywhere
+
+
+$ git status -s -> get status in summary
+ 
+ modifing/working area
+ ↓	
+ M contact.html
+ M index.html
+M  terms.html
+↑
+staging area
+
+also
+MM index.html -> file is in both working and staging area
+
+.gitignore file -> name of the which is under this file will be igonore by git 
+
+differnent gitignore entries
+mylog.log  -> igonore all file with this name(which is instead any sub-folder)
+/mylog.log -> only igonre this file in this folder
+*.log -> igonore every file with ".log" extension 
+folder/ -> to ignore a folder ,
+           default : git igonore empty folder
+
+git branch <new_branch> -> new branch created ,can update code with disturbing master branch code.
+git braach -> to show all branches and mark * on current branch 
+git checkout <branch_name> -> chamge braach
+alternative:
+git checkout -b <new_branch> -> new branch created and swtiched to it.
+
+after updating want to update code of master
+git merge <brach_nme_form code_come> -> and be in master branch to receive
+
+remote repositry / github
+
+git remote add origin <link of repositry> -> we add name "origin" for the github repo link 
+now 
+git remote -> show "origin" 
+git remote -v -> shows link of push and fetch 
+
+for private repositry
+take permission/access / ssh key to push 
+settings -> ssh key -> generate new ssh key 
+
+for change url to remote origin
+git remote set-url origin <new link of repositry>
+
+git push origin master -> push code to maste branch alternative:
+git push -u origin <branch name> -> to push / update
+and next time only 
+git push -> push directly to master 
+this is use of -u flag
+
+very important -f flag
+git push -f origin master -> will delete all older data(commit) on your remote dir(github) amd commit new data which are u pushing .
+
+git clone is used to make local repositry form the remote repositry
+git clone <link> <folder name> -> download all code to this folder of any public repo
+without given folder - > create a new folder of repo name
+
+git pull is used to update the local repositry form the remote repo
+git pull <remote> <branch>
+git pull origin master   <- example
+
+congralation -<>
+
+
+
+
+
+ 
